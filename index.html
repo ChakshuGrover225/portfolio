@@ -48,9 +48,9 @@
 
     <!-- JavaScript for Smooth Scroll -->
     <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
     </script>
 </body>
 </html>
