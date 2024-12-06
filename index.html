@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>My Portfolio</title>
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo">My Portfolio</div>
+        <div class="menu-btn">
+            <button id="onlyphone" onclick="toggleMenu()">☰</button>
+        </div>
         <div class="menu">
             <button onclick="scrollToSection('about')">About Me</button>
             <button onclick="scrollToSection('skills')">Skills</button>
@@ -48,9 +51,26 @@
 
     <!-- JavaScript for Smooth Scroll -->
     <script>
-        document.querySelector('.menu-btn').addEventListener('click', function() {
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMenu() {
             document.querySelector('.menu').classList.toggle('active');
-        });
+        }
+
+        function adjustButtonTransparency() {
+            var button = document.getElementById('onlyphone');
+            if (window.innerWidth >= 769) { // Check if screen size is desktop or larger
+                button.style.opacity = 0; // Increase transparency
+            } else {
+                button.style.opacity = 1; // Set full opacity on mobile
+            }
+        }
+
+        // Call the function on page load and resize events
+        window.addEventListener('load', adjustButtonTransparency);
+        window.addEventListener('resize', adjustButtonTransparency);
     </script>
 </body>
 </html>
