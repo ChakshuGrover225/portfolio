@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #f7f8fa, #e3e8ee);
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar .logo:hover::before {
+    content: "";
+    position: absolute;
+    top: 120%; /* Position the image below the logo text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    background: url('resource/profile_picture.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for aesthetics */
+    z-index: 100;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+    padding-right: 30px; /* Adds spacing between the menu and screen edge */
+}
+
+.navbar .menu button {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    padding: 60px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#about { background: #ffcbcb; }
+#skills { background: #ffebcb; }
+#projects { background: #cbffe2; }
+#publications { background: #cbefff; }
+#contact { background: #dbcbff; }
+#resume { background: #ffcbf2; }
+
+section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+}
