@@ -79,20 +79,24 @@ section {
     min-height: 100vh;
     padding: 60px 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: left;
+    align-items:baseline;
+    text-align:left;
     position: relative;
 }
 
 #about { background: rgb(240, 235, 216); }
+
 #skills { background: #ffffff; }
 #projects { background: #dff8ff; }
 #publications { background: #ffffff; }
 #contact { background: #dff8ff; }
 #resume { background: #ffffff; }
 
-
+.Section-headings
+{
+    text-align: left;
+}
 
 .about-container {
     flex:1;
@@ -184,6 +188,54 @@ section {
         border-color: transparent;
     }
 }
+
+
+
+
+
+
+
+.skills-item-container {
+    margin-top: 100px;
+    justify-content: center;
+    align-items:center;
+    text-align:left;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px; /* Space between items */
+    row-gap: 50px;
+    grid-auto-rows: auto; /* Automatically adjust row height */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-item-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px; /* Space between logo and text */
+}
+
+.skill-item-title {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between title and description */
+}
+
+.skill-item-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* If the number of skills is less than a multiple of 3, it will automatically fill the last row */
+.skills-item-container > .skill:nth-child(3n + 1) {
+    clear: left; /* Ensure new rows start after every 3 items */
+}
+
 
 
 
