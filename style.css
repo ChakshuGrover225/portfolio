@@ -85,11 +85,11 @@ section {
     position: relative;
 }
 
-#about { background: #f7f8fa; }
+#about { background: #d3d3d3; }
 #skills { background: #ffffff; }
-#projects { background: #f7f8fa; }
+#projects { background: #d3d3d3;}
 #publications { background: #ffffff; }
-#contact { background: #f7f8fa; }
+#contact { background: #d3d3d3; }
 #resume { background: #ffffff; }
 
 .Section-headings
