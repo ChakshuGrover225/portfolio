@@ -27,27 +27,7 @@
 
     <!-- Sections -->
     <section id="about">
-        <div class="about-container">
-            <!-- Profile Picture Section -->
-            <div class="profile-picture">
-                <img src="resource\Profile_picture.jpg" alt="Profile Picture">
-            </div>
 
-            <!-- Text Section -->
-            <div class="about-text">
-                <p class="about-text-paragraph">
-                    Hey, I am <strong>Chakshu</strong>. <br>
-                    <br>
-                    Commited to contribute to this Data-Driven World in the <strong>Decision Making</strong> and providing Advanced A.I. Services for the <strong>Human Goodwill</strong>
-                    <br><br>
-                    Here's a peek to my Endeavours...
-                </p>
-                
-                    
-                    
-            </div>
-
-        </div>
     </section>
 
 
@@ -79,62 +59,12 @@
 
 
     <section id="skills">
-        <div class="skills-section">
 
-            <h1>Skills and Expertise</h1>
-
-            <div class="skills-item-container">
-                <div class="skill-item">
-                    <img src="resource/python.png" alt="Python" class="skill-item-logo">
-                    <h3 class="skill-item-title">Python</h3>
-                    <p class="skill-item-description">primary Used for EDA, Programming, and Architecture</p>
-                </div>
-
-                <div class="skill-item">
-                    <img src="resource/R.png" alt="R" class="skill-item-logo">
-                    <h3 class="skill-item-title">R Language</h3>
-                    <p class="skill-item-description">For EDA, Statistical Calculations, and Mathematics</p>
-                </div>
-
-                <div class="skill-item">
-                    <img src="resource/csharp.png" alt="Python" class="skill-item-logo">
-                    <h3 class="skill-item-title">C #</h3>
-                    <p class="skill-item-description">For Development in DotNet Framework</p>
-                </div>
-
-
-
-                <div class="skill-item">
-                    <img src="resource/python.png" alt="Python" class="skill-item-logo">
-                    <h3 class="skill-item-title">Python</h3>
-                    <p class="skill-item-description">primary Used for EDA, Programming, and Architecture</p>
-                </div>
-
-
-
-                <div class="skill-item">
-                    <img src="resource/python.png" alt="Python" class="skill-item-logo">
-                    <h3 class="skill-item-title">Python</h3>
-                    <p class="skill-item-description">primary Used for EDA, Programming, and Architecture</p>
-                </div>
-                
-                <!-- More skills as needed -->
-            </div>
-            
-
-
-
-
-
-
-
-        </div>
     </section>
 
 
     <section id="projects">
-        <h1>Projects</h1>
-        <p>This is the Projects section.</p>
+        <div id="projects-container"></div>
     </section>
 
 
@@ -177,6 +107,48 @@
         // Call the function on page load and resize events
         window.addEventListener('load', adjustButtonTransparency);
         window.addEventListener('resize', adjustButtonTransparency);
+      
+      
+      
+      
+      const projects = [
+  {
+    image: 'https://via.placeholder.com/300x200',
+    headline: 'AI Ticket Pricing Model',
+    readme: 'https://github.com/user/airline-pricing-model',
+    description: 'Built an ML-based system using airline historical fare data to predict optimal purchase windows. Achieved 19% cost savings over random purchase strategy.'
+  },
+  {
+    image: 'https://via.placeholder.com/300x200?text=Project+2',
+    headline: 'E-commerce Dashboard',
+    readme: 'https://github.com/user/ecom-dashboard',
+    description: 'Developed a real-time e-commerce dashboard with product tracking, analytics, and admin panel. Used MongoDB, Node.js, and Chart.js.'
+  }
+];
+
+const container = document.getElementById('projects-container');
+
+projects.forEach(project => {
+  const projectHTML = `
+    <div class="project-item">
+      <div class="project-image" style="background-image: url('${project.image}')"></div>
+      <div class="project-content">
+        <div class="project-headline">
+          ${project.headline}
+          <span class="project-readme">
+            <a href="${project.readme}" target="_blank">Readme</a>
+          </span>
+        </div>
+        <div class="project-description">
+          ${project.description}
+        </div>
+      </div>
+    </div>
+  `;
+  container.innerHTML += projectHTML;
+});
+      
+      
     </script>
 </body>
 </html>
