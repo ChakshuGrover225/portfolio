@@ -365,17 +365,21 @@ section p {
 
 
 
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+
+#projects-container {
+  width: 100%;
 }
 
 .project-item {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw; /* Full viewport width */
+  box-sizing: border-box;
   padding: 1rem;
-  width: 90vw;
   margin-bottom: 2rem;
+  background-color: #e6f9ff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .project-image {
@@ -390,6 +394,9 @@ body {
 
 .project-content {
   flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-headline {
@@ -397,7 +404,6 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
@@ -413,3 +419,4 @@ body {
 .project-description {
   margin-top: 1rem;
 }
+
