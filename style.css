@@ -362,3 +362,54 @@ section p {
         word-break:keep-all ;
     }
 }
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 90vw;
+  margin-bottom: 2rem;
+}
+
+.project-image {
+  flex: 1 1 300px;
+  max-width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+}
+
+.project-content {
+  flex: 2 1 500px;
+}
+
+.project-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-readme a {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.project-description {
+  margin-top: 1rem;
+}
