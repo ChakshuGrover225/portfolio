@@ -99,6 +99,22 @@
 
 
 
+
+    <section id="projects">
+        <h2 class="section-heading">My Projects</h2>
+
+        <div id="projects-container"></div>
+
+    </section>
+
+
+
+
+
+
+
+
+
     <script>
         
         
@@ -117,15 +133,15 @@
 
         const skills = [
         {
-        image: 'resources/',
-        heading: 'JavaScript',
+        image: 'resources/csharp.png',
+        heading: '.Net Framwork',
         description: 'Client-side scripting, DOM manipulation, fetch API, and ES6+. '
         },
 
         {
-        image: 'resources/',
+        image: 'resources/python.png',
         heading: 'JavaScript',
-        description: 'Client-side scripting, DOM manipulation, fetch API, and ES6+.Client-side scripting, DOM manipulation, fetch API, and ES6+.Client-side scripting, DOM manipulation, fetch API, and ES6+.Client-side scripting, DOM manipulation, fetch API, and ES6+.Client-side scripting, DOM manipulation, fetch API, and ES6+. '
+        description: 'Client-side scripting,scripting, DOM manipulation, fetch API, and ES6+. '
         },
 
         {
@@ -173,6 +189,54 @@
             </div>
             `;
         });
+
+
+
+
+      const projects = [
+        {
+            image: 'resource/project-images/spacex-project/image.jpg',
+            headline: 'SpaceX Falcon-9 Success Prediction and Cost Estimation ',
+            readme: 'https://github.com/ChakshuGrover225/SpaceX-Falcon9-Launch-Mission-Success-Prediction---EDA/blob/main/README.md',
+            description: 'Built an ML-based system using airline historical fare data to predict optimal purchase windows. Achieved 19% cost savings over random purchase strategy.'
+        },
+        {
+            image: 'resource/project-images/Airline-ticket-pricing/image.jpg',
+            headline: 'E-commerce Dashboard',
+            readme: 'https://github.com/ChakshuGrover225/SpaceX-Falcon9-Launch-Mission-Success-Prediction---EDA/blob/main/README.md',
+            description: 'Developed a real-time e-commerce dashboard with product tracking, analytics, and admin panel. Used MongoDB, Node.js, and Chart.js.'
+        },
+        {
+            image: 'https://via.placeholder.com/300x200?text=Project+2',
+            headline: 'E-commerce Dashboard',
+            readme: 'https://github.com/user/ecom-dashboard',
+            description: 'Developed a real-time e-commerce dashboard with product tracking, analytics, and admin panel. Used MongoDB, Node.js, and Chart.js.'
+        }
+        ];
+
+        const project_container = document.getElementById('projects-container');
+
+        projects.forEach(project => {
+        const projectHTML = `
+            <div class="project-item">
+            <div class="project-image" style="background-image: url('${project.image}')"></div>
+            <div class="project-content">
+                <div class="project-headline">
+                ${project.headline}
+                <span class="project-readme">
+                    <a href="${project.readme}" target="_blank">More</a>
+                </span>
+                </div>
+                <div class="project-description">
+                ${project.description}
+                </div>
+            </div>
+            </div>
+        `;
+        project_container.innerHTML += projectHTML;
+        });
+
+
     </script>
 
 </body>
