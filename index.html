@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="zoom()"> 
 
     <!-- Navbar -->
     <div class="navbar">
@@ -71,8 +71,8 @@
                 </p>
 
                 <div class="about-buttons">
-                    <a href="#projects" class="about-btn about-btn-primary">View Projects</a>
-                    <a href="resume.pdf" class="about-btn about-btn-secondary">Download Resume</a>
+                    <a href="#projects" class="about-btn about-btn-primary"    onclick="scrollToSection('project')">View Projects</a>
+                    <a href="resume.pdf" class="about-btn about-btn-secondary" onclick="scrollToSection('resume')">Download Resume</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
 
     <section id="skills">
         <div>
-            <div class="section-heading">What can i do for you?</div>
+            <div class="section-heading">How may i help you?</div>
         </div>
 
         <div class="skills-grid" id="skillsGrid"></div>

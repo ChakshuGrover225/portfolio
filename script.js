@@ -1,3 +1,8 @@
+function zoom() {
+            document.body.style.zoom = "100%" 
+        }
+
+
 function scrollToSection(sectionId) {
             const target = document.getElementById(sectionId);
             const yOffset = -80; // adjust as needed (negative = scroll before section)
@@ -126,6 +131,13 @@ function scrollToSection(sectionId) {
 
     const projects = [
         {
+            image: 'resource/project-images/pneumonia/photo.jpg',
+            headline: 'Correlation Analysis between Pneumonia and Covid-19 Image Feature using Chest X-Rays',
+            highlights: ['Medical Diagnosis','Transfer Learning','Computer Vision','Statistical Analysis'],
+            readme: '',
+            description: 'This research project aims to analyze the correlation between pneumonia and Covid-19 by leveraging chest X-ray images. By utilizing transfer learning techniques by identifying common features and patterns in the images that can help in understanding the relationship between these two respiratory conditions.'
+        },
+        {
             image: 'resource/project-images/spacex-project/image.jpg',
             headline: 'SpaceX Falcon-9 Success Prediction and Cost Estimation',
             readme: 'https://github.com/ChakshuGrover225/SpaceX-Falcon9-Launch-Mission-Success-Prediction---EDA/blob/main/README.md',
@@ -133,12 +145,19 @@ function scrollToSection(sectionId) {
             highlights: ['Machine Learning','Statistical Modeling','Python','EDA'] 
         },
         {
-            image: 'resource/project-images/Airline-ticket-pricing/image.jpg',
-            headline: 'E-commerce Dashboard',
-            highlights: ['React','Node.js','API Integration'],
+            image: 'resource/project-images/LLM based customer support agent/photo.jpg',
+            headline: 'Fine Tuned LLM for Customer Support in E-commerce',
+            highlights: ['LLM','Data preprocessing','API Integration', 'Data Generation'],
             readme: 'https://github.com/ChakshuGrover225/SpaceX-Falcon9-Launch-Mission-Success-Prediction---EDA/blob/main/README.md',
-            description: 'Developed a real-time e-commerce dashboard with product tracking, analytics, and admin panel. Used MongoDB, Node.js, and Chart.js.'
+            description: 'Developed a customer support response agent to respond low complex queries by fine-tuning a Large Language Model on custom Dataset, enhancing response accuracy, optimizing response time on higher Complex queries, and reduced load on existing Customer response Team.'
         },
+        {
+            image: 'resource/project-images/kyc ocr/photo.webp',
+            headline: 'OCR Based Document Information Extraction System and KYC System',
+            highlights: ['Computer Vision','Image Processing','OCR','Flask API'],
+            readme: '',
+            description: 'Developed an OCR-based document information extraction system to automate data extraction from various documents. The system utilizes advanced image processing techniques and OCR technology to accurately extract relevant information, reducing manual effort and improving efficiency in document handling.'
+        }
         
     ];
 
