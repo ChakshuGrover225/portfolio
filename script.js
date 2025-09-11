@@ -154,7 +154,7 @@ function scrollToSection(sectionId) {
         {
             image: 'resource/project-images/kyc ocr/photo.webp',
             headline: 'OCR Based Document Information Extraction System and KYC System',
-            highlights: ['Computer Vision','Image Processing','OCR','Flask API'],
+            highlights: ['Computer Vision','Image Processing','OCR','Flask API','Docker'],
             readme: '',
             description: 'Developed an OCR-based document information extraction system to automate data extraction from various documents. The system utilizes advanced image processing techniques and OCR technology to accurately extract relevant information, reducing manual effort and improving efficiency in document handling.'
         }
